@@ -66,12 +66,6 @@ class ReactFacebookLoginWithButton extends React.Component {
     }
     return (
       <span style={ this.containerStyle(renderProps) }>
-        {isIconString && (
-          <link
-            rel="stylesheet"
-            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
-          />
-        )}
         <this.props.tag
           type={typeButton}
           className={`${cssClass} ${size}`}
