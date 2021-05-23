@@ -24,6 +24,7 @@ export default function ReactFacebookLoginWithButton({
   buttonStyle,
   fields = 'name',
   tag = 'button',
+  loadFontAwesome = true,
   ...props
 }) {
 
@@ -61,7 +62,7 @@ export default function ReactFacebookLoginWithButton({
         {isIconString && (
           <link
             rel="stylesheet"
-            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+            href={loadFontAwesome ? "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" : ""}
           />
         )}
         <Tag
