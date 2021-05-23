@@ -126,19 +126,13 @@ class FacebookLogin extends React.Component {
     const { language } = this.props;
     ((d, s, id) => {
       const element = d.getElementsByTagName(s)[0];
-      console.log({element});
       const fjs = element;
       let js = element;
-      console.log({d});
-      console.log({s});
-      console.log({id});
       if (d.getElementById(id)) { return; }
-      js = d.createElement('link');
-      js.href = `https://connect.facebook.net/${language}/sdk.js`;
-      js.rel = 'preload';
-      js.as = 'script';
+      js = d.createElement(s);
       js.id = id;
-      // js.src = `https://connect.facebook.net/${language}/sdk.js`;
+      js.defer = true;
+      js.src = `https://connect.facebook.net/${language}/sdk.js`;
       fjs.parentNode.insertBefore(js, fjs);
     })(document, 'script', 'facebook-jssdk');
   }
