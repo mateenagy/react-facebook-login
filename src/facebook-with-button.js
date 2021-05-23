@@ -98,4 +98,5 @@ ReactFacebookLoginWithButton.propTypes = {
   buttonStyle: PropTypes.object,
   fields: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+  loadFontAwesome: PropTypes.bool
 };
